@@ -2,92 +2,31 @@
 
 title Diagrama de Classes
 
-class Sala{
-    - nrsala:Int 
-    - capacidade:Int
-    - assento: String
-    + construtor(nrsala, capacidade,assento)
-}
+class carteirinha_de_vacinação{
+    - esquema básico: esquema básico
+    - outras vacinas: outras vacinas
+    - vacinas: vacinas
+    - pessoa: pessoa
+    - registro de carteirinha: registro de carteirinha
+    - posto: posto
+    + construtor(esquema básico, outras vacinas, vacinas, pessoa, registro de carteirinha, posto)
+} 
 
-class Sessao{
-    - nrsessao:Int
-    - dtsessao:Date
-    - hrsessao:String
-    + construtor(nrsessao, dtsessao, hrsessao)
-    
-}
 
-class Filme{
-    - nome: String
-    - classificacao: String
-    - tempoduracao: String
-    + construtor(nome, classificacao, tempoduracao)
-    
-       
-}
+esquema básico{
+    - vacina1: vacina
+    - vacina2: vacina
+    - vacina3: vacina
+    - vacina4: vacina 
+} 
+posto ( endereço - nome ) 
 
-class Cinema{
-    - nome: String
-    - cnpj:String
-    - end: String
-    + construtor(nome, cnpj, end)
-    
-}
+endereço( cep - rua - bairro - cidade - estado)
 
-class Ingresso{
-    - nringresso:Int
-    - valor: Float
-    - sala: Sala
-    - sessao: Sessao
-    - filme: Filme  
-    - cinema: Cinema 
-    + construtor(nringresso,valor, sala, sessao,filme, cinema)
-    
-   
-}
+pessoa ( nome - cpf - rg - data nascimento - convênio - estado civil - end)
 
-class Pessoa{
-    - nome:String
-    - cpf:String
-    - email:String
-    - ingresso: Ingresso
-    - pedido_lanche: PedidoLanche  
-    + construtor(nome, cpf, email, ingresso, pedido_lanche)
-    + chamar_nome(nome)
-    + chamar_valoringresso(valor)
-    + chamar_item01_combo01(item01)
+vacina ( nome - data - dose - fabricante - doença a tratar )
 
-}
-class PedidoLanche{
-    - nrpedido: Int
-    - valor: Float 
-    - combo01: Combo01
-    - combo02: Combo02
-    + construtor(nrpedido, valor,combo01,combo02)
-    + validarvalor(valor)
-}
-class Combo01{
-    - item01:String
-    - item02:String
-    + construtor(item01, item02)
-    
-}
-class Combo02{
-    - item01:String
-    - item02:String   
-    + construtor(item01, item02)
-    
-     
-}
-Pessoa *-- Ingresso: compra/Composição
-Pessoa *-- PedidoLanche: compra/Composição
-PedidoLanche o-- Combo01
-PedidoLanche o-- Combo02 
-
-Ingresso o-- Sala
-Ingresso o-- Sessao 
-Ingresso o-- Filme 
-Ingresso o-- Cinema 
 
 
 @enduml 
