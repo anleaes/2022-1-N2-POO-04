@@ -14,10 +14,11 @@ class carteirinha_de_vacinação{
 
 
 class esquema_básico{
-    - vacina1: vacina
-    - vacina2: vacina
-    - vacina3: vacina
-    - vacina4: vacina 
+    - bcg: String
+    - hepatite: String
+    - penta: String
+    - rotavirus: String
+    + construtor(bcg, hepatite, penta, rotavirus)
 } 
 
 class posto{
@@ -26,6 +27,16 @@ class posto{
     + construtor(nome, endereco)
 
 }
+
+class calendario_nacional_vacinacao{
+    - bcg: String
+    - hepatite: String
+    - penta: String
+    - rotavirus: String
+    + construtor(bcg, hepatite, penta, rotavirus)
+} 
+
+
 
 class endereco{
     - cep:Int
@@ -40,12 +51,11 @@ class pessoa{
     - cpf:String
     - rg: String
     - data_nascimento: String
-    - convenio: convenio
     - estado_civil: String
     - endereco: endereco
     + construtor(nome, cpf, rg, data_nascimento, convenio, estado_civil, endereco)
 }
-class vacina{
+class vacinas{
     - nome:String
     - data_fabricacao:String
     - dose: String
@@ -58,7 +68,27 @@ class funcionario{
     - matricula:String
     - pessoa:pessoa
     - endereco: endereco
+    - convenio: convenio
     + construtor(matricula, pessoa)
+
 }
+
+class paciente{
+    - registro:String
+    - historico: String
+    - convenio: convenio
+    - pessoa:pessoa
+    - endereco: endereco
+    + construtor(matricula, pessoa)
+    }
+
+class agendamento_ficha{
+    - nficha:String
+    - data: String
+    - horario: convenio
+    - paciente:paciente
+    + construtor(nficha, data, horario, paciente)
+    }
+
 
 @enduml 
