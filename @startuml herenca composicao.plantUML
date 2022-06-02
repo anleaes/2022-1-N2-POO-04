@@ -54,6 +54,11 @@ class vacina{
     + construtor(nome, data_fabricacao, dose, fabricante, doenca_tratar)
 }
 
-
+class funcionario{
+    - matricula:String
+    - pessoa:pessoa
+    - endereco: endereco
+    + construtor(matricula, pessoa)
+}
 
 @enduml 
