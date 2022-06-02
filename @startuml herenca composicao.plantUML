@@ -3,29 +3,56 @@
 title Diagrama de Classes
 
 class carteirinha_de_vacinação{
-    - esquema básico: esquema básico
-    - outras vacinas: outras vacinas
+    - esquema_básico: esquema_básico
+    - outras_vacinas: outras_vacinas
     - vacinas: vacinas
     - pessoa: pessoa
-    - registro de carteirinha: registro de carteirinha
+    - registro_de_carteirinha: registro_de_carteirinha
     - posto: posto
-    + construtor(esquema básico, outras vacinas, vacinas, pessoa, registro de carteirinha, posto)
+    + construtor(esquema_básico, outras_vacinas, vacinas, pessoa, registro_de_carteirinha, posto)
 } 
 
 
-esquema básico{
+class esquema_básico{
     - vacina1: vacina
     - vacina2: vacina
     - vacina3: vacina
     - vacina4: vacina 
 } 
-posto ( endereço - nome ) 
 
-endereço( cep - rua - bairro - cidade - estado)
+class posto{
+    - nome:String
+    - endereco:endereco
+    + construtor(nome, endereco)
 
-pessoa ( nome - cpf - rg - data nascimento - convênio - estado civil - end)
+}
 
-vacina ( nome - data - dose - fabricante - doença a tratar )
+class endereco{
+    - cep:Int
+    - rua:String
+    - bairro: String
+    - cidade: String
+    + construtor(cep, rua, bairro, cidade)
+}
+
+class pessoa{
+    - nome:String
+    - cpf:String
+    - rg: String
+    - data_nascimento: String
+    - convenio: convenio
+    - estado_civil: String
+    - endereco: endereco
+    + construtor(nome, cpf, rg, data_nascimento, convenio, estado_civil, endereco)
+}
+class vacina{
+    - nome:String
+    - data_fabricacao:String
+    - dose: String
+    - fabricante: String
+    - doenca_tratar: String
+    + construtor(nome, data_fabricacao, dose, fabricante, doenca_tratar)
+}
 
 
 
