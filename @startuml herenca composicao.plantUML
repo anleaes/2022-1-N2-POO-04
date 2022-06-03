@@ -2,43 +2,33 @@
 
 title Diagrama de Classes
 
-class carteirinha_de_vacinação{
-    - esquema_básico: esquema_básico
-    - outras_vacinas: outras_vacinas
-    - vacinas: vacinas
-    - pessoa: pessoa
-    - registro_de_carteirinha: registro_de_carteirinha
-    - posto: posto
-    + construtor(esquema_básico, outras_vacinas, vacinas, pessoa, registro_de_carteirinha, posto)
+class Carteirinha_de_vacinação{
+    - vacinas: Vacinas
+    - pessoa: Pessoa
+    - posto: Posto
+    - calendario_nacional_vacinacao: Calendario_nacional_vacinacao
+    + construtor(vacinas, pessoa, posto, calendario_nacional_vacinacao)
 } 
+ 
 
-
-class esquema_básico{
-    - bcg: String
-    - hepatite: String
-    - penta: String
-    - rotavirus: String
-    + construtor(bcg, hepatite, penta, rotavirus)
-} 
-
-class posto{
+class Posto{
     - nome:String
     - endereco:endereco
     + construtor(nome, endereco)
 
 }
 
-class calendario_nacional_vacinacao{
-    - bcg: String
-    - hepatite: String
-    - penta: String
-    - rotavirus: String
-    + construtor(bcg, hepatite, penta, rotavirus)
+class Calendario_nacional_vacinacao{
+    - crianca: String
+    - adolescente: String
+    - adulto: String
+    - idosos: String
+    + construtor(crianca, adolescente, adulto, idosos)
 } 
 
 
 
-class endereco{
+class Endereco{
     - cep:Int
     - rua:String
     - bairro: String
@@ -46,16 +36,16 @@ class endereco{
     + construtor(cep, rua, bairro, cidade)
 }
 
-class pessoa{
+class Pessoa{
     - nome:String
     - cpf:String
     - rg: String
     - data_nascimento: String
     - estado_civil: String
-    - endereco: endereco
+    - endereco: Endereco
     + construtor(nome, cpf, rg, data_nascimento, convenio, estado_civil, endereco)
 }
-class vacinas{
+class Vacinas{
     - nome:String
     - data_fabricacao:String
     - dose: String
@@ -64,31 +54,40 @@ class vacinas{
     + construtor(nome, data_fabricacao, dose, fabricante, doenca_tratar)
 }
 
-class funcionario{
+class Funcionario{
     - matricula:String
-    - pessoa:pessoa
-    - endereco: endereco
-    - convenio: convenio
+    - pessoa:Pessoa
     + construtor(matricula, pessoa)
 
 }
 
-class paciente{
+class Paciente{
     - registro:String
     - historico: String
-    - convenio: convenio
-    - pessoa:pessoa
-    - endereco: endereco
+    - pessoa:Pessoa
+    - endereco: Endereco
     + construtor(matricula, pessoa)
     }
 
-class agendamento_ficha{
+class Agendamento_ficha{
     - nficha:String
     - data: String
-    - horario: convenio
-    - paciente:paciente
+    - horario: String
+    - paciente:Paciente
     + construtor(nficha, data, horario, paciente)
     }
+
+Pessoa <|--> Paciente
+Pessoa <|--> Funcionario
+Endereco <|--> Pessoa
+Endereco <|--> Posto
+Carteirinha_de_vacinação --> Calendario_nacional_vacinacao
+Pessoa <|--> Carteirinha_de_vacinação 
+
+Posto *--> Funcionario
+Posto *--> Agendamento_ficha
+Vacinas *--> Carteirinha_de_vacinação
+Paciente *--> Agendamento_ficha
 
 
 @enduml 
