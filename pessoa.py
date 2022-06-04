@@ -1,4 +1,4 @@
-from endereco import *
+from endereco import Endereco
 
 class Pessoa(Endereco):
     def __init__(self, cep, rua,bairro,cidade, nome,cpf, rg, idade):
