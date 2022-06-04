@@ -5,7 +5,6 @@ title Diagrama de Classes
 class Carteirinha_de_vacinação{
     - vacinas: Vacinas
     - pessoa: Pessoa
-    - posto: Posto
     - calendario_nacional_vacinacao: Calendario_nacional_vacinacao
     + construtor(vacinas, pessoa, posto, calendario_nacional_vacinacao)
 } 
