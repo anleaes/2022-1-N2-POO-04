@@ -72,6 +72,7 @@ class Agendamento_ficha{
     - data: String
     - horario: String
     - paciente:Paciente
+    - posto: Posto
     + construtor(nficha, data, horario, paciente)
     }
 
