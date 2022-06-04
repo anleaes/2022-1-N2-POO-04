@@ -64,7 +64,6 @@ class Paciente{
     - registro:String
     - historico: String
     - pessoa:Pessoa
-    - endereco: Endereco
     + construtor(matricula, pessoa)
     }
 
