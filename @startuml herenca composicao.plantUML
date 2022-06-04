@@ -13,7 +13,7 @@ class Carteirinha_de_vacinação{
 
 class Posto{
     - nome:String
-    - endereco:endereco
+    - endereco:Endereco
     + construtor(nome, endereco)
 
 }
@@ -40,8 +40,7 @@ class Pessoa{
     - nome:String
     - cpf:String
     - rg: String
-    - data_nascimento: String
-    - estado_civil: String
+    - idade: Int
     - endereco: Endereco
     + construtor(nome, cpf, rg, data_nascimento, convenio, estado_civil, endereco)
 }
