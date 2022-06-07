@@ -2,6 +2,19 @@
 
 title Diagrama de Classes
 
+class Menu{
+    -pessoa: Pessoa
+    -paciente: Paciente
+    -funcionario: Funcionario
+    -endereco: Endereco
+    -posto: Posto
+    -agendamento_ficha: Agendamento_ficha
+    -carteirinha_de_vacinacao: Carteirinha_de_vacinacao
+    -vacinas: Vacinas
+    -calendario_nacional_vacinacao: Calendario_nacional_vacinacao
+    +construtor(pessoa, paciente, funcionario, endereco, posto, agendamento_ficha, carteirinha_de_vacinacao, vacinas, calendario_nacional_vacinacao)
+
+}
 class Carteirinha_de_vacinação{
     - vacinas: Vacinas
     - pessoa: Pessoa
