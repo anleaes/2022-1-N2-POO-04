@@ -39,7 +39,7 @@ class CalendarioNacionalVacinacao:
     def set_idosos(self, idosos):
         self._idosos = idosos
         
-calendario2022 = CalendarioNacionalVacinacao ('janeiro - 0 a 12anos',' março - 12 a 17anos','abril 18 a 59anos',' maio 60 a 99anos' )
+calendario2022 = CalendarioNacionalVacinacao ('Crianças: janeiro - 0 a 12anos','Adolescentes março - 12 a 17anos',' Adultos abril 18 a 59anos','Idosos maio 60 a 99anos' )
 
 print (calendario2022.crianca)
 
