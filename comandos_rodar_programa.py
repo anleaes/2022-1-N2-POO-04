@@ -1,0 +1,1 @@
+#comandos arquivo externo 
