@@ -35,6 +35,8 @@ class Carteirinha_de_vacinação{
 
 class Posto{
     - nome:String
+    - telefone: String
+    - cnpj: String
     - endereco:Endereco
     + construtor(nome, endereco)
 
