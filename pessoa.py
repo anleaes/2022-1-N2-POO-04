@@ -12,7 +12,7 @@ class Pessoa(Endereco):
     def chamar_nome(self):
             print (self.nome)
         
-    def chamar_endereco(self):
+    def chamar_endereco_rua(self):
             print (self.rua)
             
             
