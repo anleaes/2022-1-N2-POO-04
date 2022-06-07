@@ -43,7 +43,7 @@ calendario2022 = CalendarioNacionalVacinacao ('Crianças: janeiro - 0 a 12anos',
 
 print (calendario2022.crianca)
 
-calendario2022.set_crianca = input("digite nova data de vacinação: ")
+calendario2022.set_crianca = input(" teste teste : ")
 
 print(calendario2022.get_crianca)
 
