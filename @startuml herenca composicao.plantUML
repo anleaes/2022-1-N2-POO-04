@@ -2,6 +2,29 @@
 
 title Diagrama de Classes
 
+class Pessoa{
+    - nome:String
+    - cpf:String
+    - rg: String
+    - idade: Int
+    - endereco: Endereco
+    + construtor(nome, cpf, rg, data_nascimento, convenio, estado_civil, endereco)
+}
+
+class Funcionario{
+    - matricula:String
+    - pessoa:Pessoa
+    + construtor(matricula, pessoa)
+
+}
+
+class Paciente{
+    - registro:String
+    - historico: String
+    - pessoa:Pessoa
+    + construtor(matricula, pessoa)
+    }
+
 class Carteirinha_de_vacinação{
     - vacinas: Vacinas
     - pessoa: Pessoa
@@ -25,8 +48,6 @@ class Calendario_nacional_vacinacao{
     + construtor(crianca, adolescente, adulto, idosos)
 } 
 
-
-
 class Endereco{
     - cep:Int
     - rua:String
@@ -35,14 +56,7 @@ class Endereco{
     + construtor(cep, rua, bairro, cidade)
 }
 
-class Pessoa{
-    - nome:String
-    - cpf:String
-    - rg: String
-    - idade: Int
-    - endereco: Endereco
-    + construtor(nome, cpf, rg, data_nascimento, convenio, estado_civil, endereco)
-}
+
 class Vacinas{
     - nome:String
     - data_fabricacao:String
@@ -52,19 +66,7 @@ class Vacinas{
     + construtor(nome, data_fabricacao, dose, fabricante, doenca_tratar)
 }
 
-class Funcionario{
-    - matricula:String
-    - pessoa:Pessoa
-    + construtor(matricula, pessoa)
 
-}
-
-class Paciente{
-    - registro:String
-    - historico: String
-    - pessoa:Pessoa
-    + construtor(matricula, pessoa)
-    }
 
 class Agendamento_ficha{
     - nficha:String
@@ -80,7 +82,7 @@ Pessoa <|--> Funcionario
 Endereco <|--> Pessoa
 Endereco <|--> Posto
 Carteirinha_de_vacinação --> Calendario_nacional_vacinacao
-Pessoa <|--> Carteirinha_de_vacinação 
+Paciente <|--> Carteirinha_de_vacinação 
 
 Posto *--> Funcionario
 Posto *--> Agendamento_ficha

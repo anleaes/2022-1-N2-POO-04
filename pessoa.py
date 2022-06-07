@@ -9,3 +9,11 @@ class Pessoa(Endereco):
         self.idade = idade
         
         
+    def chamar_nome(self):
+            print (self._nome)
+        
+    def chamar_endereco(self):
+            print (self._endereco._rua)
+       
+   
+        
