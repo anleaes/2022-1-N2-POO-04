@@ -10,10 +10,12 @@ class Pessoa(Endereco):
         
         
     def chamar_nome(self):
-            print (self._nome)
+            print (self.nome)
         
     def chamar_endereco(self):
-            print (self._endereco._rua)
+            print (self.rua)
+            
+            
        
    
         

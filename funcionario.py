@@ -7,5 +7,5 @@ class Funcionario(Pessoa):
         
         
     def ver_nome(self):
-        print (self._pessoa._nome)
+        print (self.nome)
         
