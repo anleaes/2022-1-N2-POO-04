@@ -31,7 +31,7 @@ class Carteirinha_de_vacinação{
     - calendario_nacional_vacinacao: Calendario_nacional_vacinacao
     + construtor(vacinas, pessoa, posto, calendario_nacional_vacinacao)
 } 
- #alteração2
+
 
 class Posto{
     - nome:String
@@ -89,6 +89,8 @@ Funcionario <--* Posto
 Pessoa <|--> Carteirinha_de_vacinação 
 Carteirinha_de_vacinação <--* Vacinas
 Carteirinha_de_vacinação --> Calendario_nacional_vacinacao
+
+Pessoa <|--> Endereco
 
 
 @enduml 
