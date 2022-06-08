@@ -7,12 +7,14 @@ class Vacinas:
         self.fabricante = fabricante
         self.doenca_tratar = doenca_tratar
         self.quantidade = quantidade
-    def Vacinas_fabricante(self):
+    def vacinas_fabricante(self):
         return print(self.fabricante)
-    def Vacinas_nome(self):
+    def vacinas_nome(self):
         return print(self.nome_vacina)
         
 
 
-vac1 = Vacinas(99955, "gripezinha", '20_05_2021', "dose unica","fiocruz", 'covid19', 0)  
+vac1 = Vacinas(99955, "gripezinha", '20_05_2021', "dose unica","fiocruz", 'covid19', 0) 
+vac2 = Vacinas(77788, "malaria", '31_09_2022', "dose unica","fiocruz", 'covid19', 2)
+ 
      
