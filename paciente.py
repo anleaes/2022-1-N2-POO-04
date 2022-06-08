@@ -1,9 +1,14 @@
-from pessoa import Pessoa
+from pessoa import *
 
-class Paciente(Pessoa):
-    def __init__(self, nome, cpf, rg, idade, registro):
-        super(Paciente,self).__init__(nome, cpf, rg, idade)
+class Paciente:
+    def __init__(self, pessoa, registro):
+        #super(Paciente,self).__init__(nome, cpf, rg, idade)
+        self.pessoa = pessoa
         self.registro = registro
         
         
-pa01 = Paciente('greice', 6546546, 32132132, 32, 999)
+pa01 = Paciente(p1, 999)
+pa02 = Paciente(p2, 777)
+
+
+

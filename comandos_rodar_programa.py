@@ -7,6 +7,13 @@
 from pessoa import *
 from endereco import *
 from funcionario import *
+from posto import *
+from paciente import *
+from vacinas import *
+from agendamento_ficha import *
+from calendario_nacional_vacinacao import *
+from carteirinha_de_vacinacao import *
+
 
 
 
@@ -19,6 +26,15 @@ func01 = Funcionario(p1, 5555555)
 func01.ver_nome()
 p1.endereco_casa_pessoa()
 func01.numero_matricula()
+ficha001.endereco_posto_paciente()
+ficha001.diaehora_ficha()
+calendario2022.calendario_nacional()
+vac1.vacinas_fabricante()
+
+
+
+
+
 
 
 
