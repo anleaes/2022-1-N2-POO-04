@@ -2,38 +2,6 @@
 
 title Diagrama de Classes
 
-class Carteirinha_de_vacinação{
-    - vacinas: Vacinas
-    - pessoa: Pessoa
-    - calendario_nacional_vacinacao: Calendario_nacional_vacinacao
-    + construtor(vacinas, pessoa, posto, calendario_nacional_vacinacao)
-} 
-
-
-class Posto{
-    - nome:String
-    - endereco:Endereco
-    + construtor(nome, endereco)
-}
-
-class Calendario_nacional_vacinacao{
-    - crianca: String
-    - adolescente: String
-    - adulto: String
-    - idosos: String
-    + construtor(crianca, adolescente, adulto, idosos)
-} 
-
-
-
-class Endereco{
-    - cep:Int
-    - rua:String
-    - bairro: String
-    - cidade: String
-    + construtor(cep, rua, bairro, cidade)
-}
-
 class Pessoa{
     - nome:String
     - cpf:String
@@ -41,14 +9,6 @@ class Pessoa{
     - idade: Int
     - endereco: Endereco
     + construtor(nome, cpf, rg, data_nascimento, convenio, estado_civil, endereco)
-}
-class Vacinas{
-    - nome:String
-    - data_fabricacao:String
-    - dose: String
-    - fabricante: String
-    - doenca_tratar: String
-    + construtor(nome, data_fabricacao, dose, fabricante, doenca_tratar)
 }
 
 class Funcionario{
@@ -64,6 +24,50 @@ class Paciente{
     - pessoa:Pessoa
     + construtor(matricula, pessoa)
     }
+
+class Carteirinha_de_vacinação{
+    - vacinas: Vacinas
+    - pessoa: Pessoa
+    - calendario_nacional_vacinacao: Calendario_nacional_vacinacao
+    + construtor(vacinas, pessoa, posto, calendario_nacional_vacinacao)
+} 
+
+
+class Posto{
+    - nome:String
+    - telefone: String
+    - cnpj: String
+    - endereco:Endereco
+    + construtor(nome, endereco)
+}
+
+class Calendario_nacional_vacinacao{
+    - crianca: String
+    - adolescente: String
+    - adulto: String
+    - idosos: String
+    + construtor(crianca, adolescente, adulto, idosos)
+} 
+
+class Endereco{
+    - cep:Int
+    - rua:String
+    - bairro: String
+    - cidade: String
+    + construtor(cep, rua, bairro, cidade)
+}
+
+
+class Vacinas{
+    - nome:String
+    - data_fabricacao:String
+    - dose: String
+    - fabricante: String
+    - doenca_tratar: String
+    + construtor(nome, data_fabricacao, dose, fabricante, doenca_tratar)
+}
+
+
 
 class Agendamento_ficha{
     - nficha:String
