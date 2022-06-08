@@ -14,7 +14,7 @@ class Vacinas:
         
 
 
-vac1 = Vacinas(99955, "gripezinha", '20_05_2021', "dose unica","fiocruz", 'covid19', 0) 
-vac2 = Vacinas(77788, "malaria", '31_09_2022', "dose unica","fiocruz", 'covid19', 2)
+vac1 = Vacinas(99955, "gripezinha", '20_05_2021', "dose unica","FABRICANTE: fiocruz", 'covid19', 0) 
+vac2 = Vacinas(77788, "malaria", '31_09_2022', "dose unica","FABRICANTE: fiocruz", 'covid19', 2)
  
      
