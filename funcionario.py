@@ -8,7 +8,7 @@ class Funcionario:
         
         
     def ver_nome(self):
-        print (self.pessoa.nome)
+        print ("NOME DO FUNCIONÁRIO: ", self.pessoa.nome)
     def numero_matricula(self):
         return print("o numero de matrícula do(a) funcionario(a)  ", self.pessoa.nome, "é: ", self.matricula)
         
