@@ -29,3 +29,4 @@ class Pessoa:
         return print(self.vacinas.fabricante)
 
 p1 = Pessoa(889, 'alberto', 'joão', 'gerson alegre', 'muttley', '400.289.22', 558893, 18)
+p2 = Pessoa(889, 'alberrrrrto', 'joão', 'gerson agdgglegre', 'penelope', '400efef.289.22', 558893, 18)
