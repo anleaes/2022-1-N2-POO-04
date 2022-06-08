@@ -1,16 +1,18 @@
-from pessoa import Pessoa
+from pessoa import *
 
-class Funcionario(Pessoa):
-    def __init__(self, nome, cpf, rg, idade, matricula):
-        super(Funcionario,self).__init__(nome, cpf, rg, idade)
+class Funcionario:
+    def __init__(self, pessoa, matricula):
+        #super(Funcionario,self).__init__(nome, cpf, rg, idade)
+        self.pessoa = pessoa
         self.matricula = matricula
         
         
     def ver_nome(self):
-        print (self.nome)
+        print (self.pessoa.nome)
     def numero_matricula(self):
-        return print("o numero de matrícula do(a) funcionario(a)  %i ", self.nome, "é %i", self.matricula)
+        return print("o numero de matrícula do(a) funcionario(a)  ", self.pessoa.nome, "é: ", self.matricula)
         
-func01 = Funcionario('veronica', 55555555, 44444444, 59, 656565)
+#func01 = Funcionario('veronica', 55555555, 44444444, 59, 656565)
+
 
         
