@@ -2,19 +2,6 @@
 
 title Diagrama de Classes
 
-class Menu{
-    -pessoa: Pessoa
-    -paciente: Paciente
-    -funcionario: Funcionario
-    -endereco: Endereco
-    -posto: Posto
-    -agendamento_ficha: Agendamento_ficha
-    -carteirinha_de_vacinacao: Carteirinha_de_vacinacao
-    -vacinas: Vacinas
-    -calendario_nacional_vacinacao: Calendario_nacional_vacinacao
-    +construtor(pessoa, paciente, funcionario, endereco, posto, agendamento_ficha, carteirinha_de_vacinacao, vacinas, calendario_nacional_vacinacao)
-
-}
 class Carteirinha_de_vacinação{
     - vacinas: Vacinas
     - pessoa: Pessoa
@@ -27,7 +14,6 @@ class Posto{
     - nome:String
     - endereco:Endereco
     + construtor(nome, endereco)
-
 }
 
 class Calendario_nacional_vacinacao{
@@ -89,16 +75,16 @@ class Agendamento_ficha{
     }
 
 Pessoa <|--> Paciente
-Pessoa <|--> Funcionario
-Endereco <|--> Pessoa
-Endereco <|--> Posto
-Carteirinha_de_vacinação --> Calendario_nacional_vacinacao
-Pessoa <|--> Carteirinha_de_vacinação 
-
-Posto *--> Funcionario
-Posto *--> Agendamento_ficha
-Vacinas *--> Carteirinha_de_vacinação
 Paciente *--> Agendamento_ficha
+Agendamento_ficha <--* Posto
+Posto<--|> Endereco
+
+Pessoa <|--> Funcionario
+Funcionario <--* Posto
+
+Pessoa <|--> Carteirinha_de_vacinação 
+Carteirinha_de_vacinação <--* Vacinas
+Carteirinha_de_vacinação --> Calendario_nacional_vacinacao
 
 
 @enduml 

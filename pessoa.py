@@ -1,8 +1,6 @@
-from endereco import Endereco
 
-class Pessoa(Endereco):
-    def __init__(self, cep, rua,bairro,cidade, nome,cpf, rg, idade):
-        super(Pessoa,self) .__init__(cep,rua,bairro,cidade)
+class Pessoa:
+    def __init__(self, nome,cpf, rg, idade):
         self.nome = nome
         self.cpf = cpf
         self.rg = rg
