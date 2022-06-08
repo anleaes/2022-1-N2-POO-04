@@ -15,6 +15,11 @@ class Pessoa(Endereco):
     def chamar_endereco_rua(self):
             print (self.rua)
             
+p1 = Pessoa('91780-999', 'ipirangfa 241', 'vila nova', 'poa', 'jasmin da silva', 8798798, 6546546, 55)
+p2 = Pessoa('88888-999', 'cap. amarantes xavier 241', 'campo novo', 'canoas', 'rodolfo da silva', 998798798, 996546546, 29)
+
+
+            
             
        
    
