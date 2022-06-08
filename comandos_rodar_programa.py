@@ -23,7 +23,7 @@ from carteirinha_de_vacinacao import *
 #p1.chamar_endereco_rua()
 
 
-func01.ver_nome()
+func02.ver_nome()
 p1.endereco_casa_pessoa()
 func01.numero_matricula()
 ficha001.endereco_posto_paciente()
