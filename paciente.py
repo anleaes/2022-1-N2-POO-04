@@ -6,6 +6,4 @@ class Paciente(Pessoa):
         self.registro = registro
         
         
-        
-pa01 = Paciente('veronica', 98798798, 32132132, 45, 666)
-pa02 = Paciente('greice', 6546546, 32132132, 32, 999)
+pa01 = Paciente('greice', 6546546, 32132132, 32, 999)

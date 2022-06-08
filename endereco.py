@@ -5,5 +5,5 @@ class Endereco:
         self.bairro = bairro
         self.cidade = cidade
         
-end01 = Endereco('91790-241', 'bento gonçalves 555', 'jardim carvalho', 'poa')
-end02 = Endereco('92890-541', 'ipiranga 241', 'lomba pinheiro', 'sapucaia')
+end01 = Endereco('91790-850', 'voluntarios', 'centro', 'poa')
+end02 = Endereco('91766-66', 'andradas', 'joaquina', 'CANOAS')
